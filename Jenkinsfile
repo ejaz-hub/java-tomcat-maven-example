@@ -12,8 +12,6 @@ pipeline {
             steps {
                 sh echo "Testing the code"
                 'mvn test'
-                #'-P metrics pmd:pmd --reportfile **/*.xml --exclude vendor/ || exit 0'
-                #pmd canRunOnFailed: true, pattern: '**/*.xml'
             }
         }
 
@@ -23,8 +21,6 @@ pipeline {
             steps {
                 echo "Building war file"
                 sh 'mvn package'
-                #archiveArtifacts artifacts : 'target/*.war'
-            }
         }
 
     }
