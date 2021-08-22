@@ -10,7 +10,8 @@ pipeline {
 
         stage ('Test') {
             steps {
-                sh '''#!/bin/bash
+                sh '''
+                      #!/bin/bash
                       echo "Testing the code"
                       mvn test'''
             }
@@ -20,7 +21,8 @@ pipeline {
         
         stage ('package'){
             steps {
-                ''' #!/bin/bash
+                sh'''
+                    #!/bin/bash
                     echo "Testing the code"
                     mvn test'''
         }
